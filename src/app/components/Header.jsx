@@ -43,16 +43,16 @@ const Header = ({ pageTitle }) => {
   const userRole = getRoleText();
 
   return (
-    <header className="h-27 bg-white border-b border-slate-200 flex items-center justify-between px-6">
+    <header className="h-[6.7rem] bg-white border-b border-slate-200 flex items-center justify-between px-6">
       {/* Page Title Section */}
-      <h2 className="text-xl font-semibold text-slate-800">
+      <h2 className="text-xl font-semibold text-slate-800 pl-[2.3rem]">
         {pageTitle || "Dashboard"}
       </h2>
 
       {/* User Info and Logout Section */}
       <div className="flex items-center space-x-4">
-        {/* User Name and Role */}
-        <div className="text-right">
+        {/* User Name and Role - Hidden on screens smaller than 650px */}
+        <div className="text-right hidden sm:block">
           <span className="font-semibold text-sm text-slate-700">
             {user?.name || "Guest"} {/* Display user's name from Redux */}
           </span>

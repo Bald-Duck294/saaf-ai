@@ -112,6 +112,26 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       label: "Assign Locations",
       href: "/cleaner-assignments",
     },
+
+    {
+      icon: Bath,
+      label: "Cleaner Assignments",
+      hasDropdown: true,
+      key: "cleaner-assignments",
+      children: [
+        {
+          icon: List,
+          label: "Assignments List",
+          href: "/cleaner-assignments", // ✅ absolute path
+        },
+        {
+          icon: PlusCircle,
+          label: "Add Assignment",
+          href: "/cleaner-assignments/add", // ✅ absolute path
+        },
+      ],
+    },
+
     { icon: ClipboardList, label: "Cleaner Review", href: "/cleaner-review" },
     // { icon: Star, label: "User Review", href: "/user-review" },
   ];
@@ -173,9 +193,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {isMobile && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 z-[60] p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg lg:hidden transition-all duration-200"
+          className="fixed top-2 left-4 z-[60] p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg lg:hidden transition-all duration-200"
         >
-          {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
+          {sidebarOpen ? <X size={20} /> : <Menu size={15} />}
         </button>
       )}
 

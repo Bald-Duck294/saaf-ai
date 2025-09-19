@@ -25,7 +25,7 @@ export const AuthApi = {
     console.log(phone, password, "cread form login");
     try {
         console.log('requst made' )
-      const response = await axios.post(`http://localhost:8000/api/login`, {
+      const response = await axios.post(`${API_BASE_URL }/login`, {
         phone,
         password,
       });

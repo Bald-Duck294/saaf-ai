@@ -97,8 +97,8 @@ export default function Dashboard() {
   // --- DYNAMIC DATA MAPPING ---
   const stats = [
     { label: "Total Locations", value: statsData.totalLocations, color: "text-sky-600 bg-sky-50", icon: <MapPin className="w-6 h-6 text-sky-500" /> },
-    { label: "Total Users", value: statsData.totalUsers, color: "text-emerald-600 bg-emerald-50", icon: <Users className="w-6 h-6 text-emerald-500" /> },
-    { label: "Avg. Rating", value: statsData.avgRating, color: "text-amber-600 bg-amber-50", icon: <Star className="w-6 h-6 text-amber-500" /> },
+    // { label: "Total Users", value: statsData.totalUsers, color: "text-emerald-600 bg-emerald-50", icon: <Users className="w-6 h-6 text-emerald-500" /> },
+    // { label: "Avg. Rating", value: statsData.avgRating, color: "text-amber-600 bg-amber-50", icon: <Star className="w-6 h-6 text-amber-500" /> },
     { label: "Ongoing Tasks", value: statsData.ongoingTasks, color: "text-violet-600 bg-violet-50", icon: <ClipboardList className="w-6 h-6 text-violet-500" />, filterKey: 'ongoing' },
     { label: "Completed Tasks", value: statsData.completedTasks, color: "text-rose-600 bg-rose-50", icon: <CheckCircle className="w-6 h-6 text-rose-500" />, filterKey: 'completed' },
   ];
