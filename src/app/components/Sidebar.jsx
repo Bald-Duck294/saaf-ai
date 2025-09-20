@@ -107,11 +107,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         { icon: PlusCircle, label: "Add Washroom", href: "/add-location" },
       ],
     },
-    {
-      icon: UserCheck,
-      label: "Assign Locations",
-      href: "/cleaner-assignments",
-    },
+    // {
+    //   icon: UserCheck,
+    //   label: "Assign Locations",
+    //   href: "/cleaner-assignments",
+    // },
 
     {
       icon: Bath,
