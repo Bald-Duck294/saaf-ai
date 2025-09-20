@@ -59,8 +59,8 @@ export default function AssignmentListPage() {
           <thead className="bg-slate-100">
             <tr>
               <th className="p-2 border">ID</th>
-              <th className="p-2 border">Cleaner User ID</th>
-              <th className="p-2 border">Location ID</th>
+              <th className="p-2 border">Cleaner Name </th>
+              <th className="p-2 border">Location Name</th>
               <th className="p-2 border">Status</th>
               <th className="p-2 border">Actions</th>
             </tr>
