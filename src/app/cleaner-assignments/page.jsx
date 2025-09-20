@@ -43,7 +43,7 @@ export default function AssignmentListPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Cleaner Assignments</h1>
         <Link
-          href="/cleaner-assignments/assignments/add"
+          href="/cleaner-assignments/add"
           className="px-4 py-2 bg-indigo-600 text-white rounded-lg"
         >
           + Add Assignment
@@ -84,14 +84,14 @@ export default function AssignmentListPage() {
 
                 <td className="p-2 border space-x-2">
                   <Link
-                    href={`/cleaner-assignments/assignments/${a.id}`}
-                    className="px-3 py-1 bg-yellow-500 text-white rounded-md"
+                    href={`/cleaner-assignments/${a.id}`}
+                    className="px-3 py-1 bg-[#f2bb63] text-white rounded-md"
                   >
                     Edit
                   </Link>
                   <button
                     onClick={() => handleDelete(a.id)}
-                    className="px-3 py-1 bg-red-600 text-white rounded-md"
+                    className="px-3 py-1 bg-red-400 text-white rounded-md"
                   >
                     Delete
                   </button>

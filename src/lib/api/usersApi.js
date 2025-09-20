@@ -8,12 +8,15 @@ export const UsersApi = {
    * @returns {Promise<object>}
    */
   getAllUsers: async (companyId = null) => {
+    console.log("in get all user");
     try {
       const params = new URLSearchParams();
       if (companyId) {
         params.append("companyId", companyId);
       }
-      const response = await axiosInstance.get(`${API_BASE_URL}/users?${params.toString()}`);
+      const response = await axiosInstance.get(
+        `${API_BASE_URL}/users?${params.toString()}`
+      );
       return {
         success: true,
         data: response.data,

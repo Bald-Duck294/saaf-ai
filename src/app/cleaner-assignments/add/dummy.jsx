@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import { UsersApi } from "@/lib/api/usersApi";
 // import  LocationsApi  from '../../lib/api/LocationApi'
@@ -17,8 +18,6 @@ import {
 // import { useRouter } from "next/navigation";
 
 const AddAssignmentPage = () => {
-  console.log("AddAssignmentPage rendered!");
-
   // --- STATE MANAGEMENT ---
   const [cleanerUserId, setCleanerUserId] = useState("");
   const [selectedLocations, setSelectedLocations] = useState([]);
@@ -36,8 +35,9 @@ const AddAssignmentPage = () => {
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const { user: loggedInUser } = useSelector((state) => state.auth);
   //   const companyId = loggedInUser?.company_id;
-  const companyId = 2;
+  // const companyId = 2;
 
   const userDropdownRef = useRef(null);
   const locationDropdownRef = useRef(null);
@@ -47,7 +47,6 @@ const AddAssignmentPage = () => {
   useEffect(() => {
     console.log("entered use effect");
     if (!companyId) return;
-
 
     const fetchData = async () => {
       setIsLoading(true);
@@ -124,7 +123,7 @@ const AddAssignmentPage = () => {
       setSelectedLocations([]);
       setUserSearchTerm("");
       setTimeout(() => {
-        window.location.href = "/cleaner-assignments/";
+        window.location.href = "/cleaner-assignments/assignments";
       }, 800);
     } else {
       toast.error(response.error || "Failed to create assignments.");
