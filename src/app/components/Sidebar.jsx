@@ -132,6 +132,25 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       ],
     },
 
+    {
+      icon: Bath,
+      label: "Company Management",
+      hasDropdown: true,
+      key: "company-management",
+      children: [
+        {
+          icon: List,
+          label: "Company List",
+          href: "/companies", // ✅ absolute path
+        },
+        {
+          icon: PlusCircle,
+          label: "Add Company",
+          href: "/companies/add", // ✅ absolute path
+        },
+      ],
+    },
+
     { icon: ClipboardList, label: "Cleaner Review", href: "/cleaner-review" },
     // { icon: Star, label: "User Review", href: "/user-review" },
   ];
